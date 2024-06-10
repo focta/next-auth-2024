@@ -1,0 +1,15 @@
+services:
+  auth-postgres:
+    image: postgres:16.3
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: next-app
+      POSTGRES_PASSWORD: nextpassword
+      POSTGRES_DB: next-app
+    restart: always
+    networks:
+      - lesson
+
+networks:
+  lesson:
